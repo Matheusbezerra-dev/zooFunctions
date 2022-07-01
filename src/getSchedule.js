@@ -2,7 +2,7 @@ const data = require('../data/zoo_data');
 
 const days = Object.keys(data.hours);
 const hours = Object.values(data.hours);
-const animals = data.species.map((spc) => spc.name);
+const animals = data.species.map((numb) => numb.name);
 
 const mappingSchedule = () => days.reduce((acc, number, index) => {
   if (number === 'Monday') {
