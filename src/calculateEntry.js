@@ -11,7 +11,8 @@ const countEntrants = (entrants) => {
 const calculateEntry = (entrants) => {
   if (!Array.isArray(entrants)) return 0;
   const people = countEntrants(entrants);
-  const sum = (people.child * 20.99) + (people.adult * 49.99) + (people.senior * 24.99);
+  const sum = (people.child * data.prices.child) + (people.adult * data.prices.adult) + (
+    people.senior * data.prices.senior);
   return sum;
 };
 
