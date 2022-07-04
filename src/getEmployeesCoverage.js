@@ -7,14 +7,14 @@ const getSpecie = (paramTwon) => {
   if (!employee) throw new Error('Informações inválidas');
   const { id, firstName, lastName, responsibleFor: animalIds } = employee;
   const specie = data.species.filter(({ id: animalId }) => animalIds.some(
-    (animal) => animal === animalId));
+    (animal) => animal === animalId,
+  ));
 
   return {
     id,
     fullName: `${firstName} ${lastName}`,
     species: specie.map(({ name }) => name),
-    locations: specie.map(({ location }) => location) 
-  };
+    locations: specie.map(({ location }) => location) };
 };
 
 const getEmployeesCoverage = (param) => {
